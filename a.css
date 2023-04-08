@@ -23,7 +23,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: aqua;
+    background-color: black;
     position: relative;
     width: 100%;
     border: 4px black solid;
@@ -39,8 +39,8 @@ body {
     width: 75px ;
     height: 75px;
     position: relative;
-    content:url(http://placehold.it/100x100);
-    padding: 5px;
+    content:url(logo.png);
+
     
 }
 .titlebar .titlecont {
@@ -51,12 +51,17 @@ body {
     width:calc(100% - 75px);
     height: 100%;
     min-height: fit-content;
-    border: red 4px solid;
+    border: black 4px solid;
+    border-radius: 20px;
 }
 .titlebar .site-name {
     display: flex;
+    /* padding: ; */
+    
     background-color: brown;
     width: 40%;
+    border-radius: 10px;
+    justify-content: center;
     
 }
 .titlebar .platformlist{
@@ -105,7 +110,7 @@ body {
     flex-direction: row;
     /* justify-self: center;
     align-items: end; */
-    right: 350px;
+    right: calc(25vw + 20px);
     width: 100%;
     align-items: center;
     justify-content: end;
@@ -113,7 +118,10 @@ body {
 }
 .ribbon .searchform input{
     /* display: flex; */
+    
     background-color: orange;
+    width: 100px;
+    /* min-width: fit-content; */
 }
 
 .ribbon .searchform label{
@@ -122,9 +130,14 @@ body {
 }
 .ribbon .searchform button{
     position: relative;
-    content: url(favicon.png);
-    width: 30px;
-    height: 30px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: url(favicon.png) 3px repeat ;
+    border-radius: 35px;
+    width: 35px;
+    height: 35px;
+    
 }
 .ribbon .searchresults{
     display: flex;
@@ -141,7 +154,7 @@ body {
     display: flex;
     border: 1px brown dotted;
     height: 60px;
-    width: 330px;
+    width: 25vw;
     border-radius: 15px;
     margin: 10px;
     background-color: orange;
