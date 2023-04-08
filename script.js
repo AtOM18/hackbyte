@@ -42,7 +42,7 @@ function render_images(){
                 //updating the dom
                 const movie = `<div class="imdbcont">
                                   <div class="imdbcontimg"></div>
-                                    <img src="${image}" alt="${name}">
+                                    <img src="${image}" alt="${name}" >
                                     <div class="grp">
                                       <div class="imdbconttitle">
                                         <p>${name}</p>
