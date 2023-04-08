@@ -35,6 +35,7 @@ function render_images(){
 	    .then(data => {
             const list = data
             window.listitems = list
+            document.querySelector('.imdbcontainer').innerHTML = ''
             for(let i = startIndex; i < endIndex && i < totalImages; i++){
               let item = list[i]
               console.log("test")
