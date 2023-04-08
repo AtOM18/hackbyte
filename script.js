@@ -88,20 +88,26 @@ function search_movies(){
             console.log(title)
             //style="background: url(${image});
             let html = `<div class="resultcontainer">
-                          <div class="resultcontainerimage"> 
-                            <img src="${image}" alt="${title}" height="60">
-                          </div>
-                          <div class="resultcontainertitle" >
+                        <!-- these are the containers which will contain the image , name and the release date of the movie -->
+                        <div class="resultcontainerimage">
+                            <img src="${image}" alt="${title}">
+                            <!-- this contains the image of the container -->
+                        </div>
+                        <div class="containergroup">
+                        <div class="resultcontainertitle">
                             <p>${title}</p>
-                          </div>
-                          <div class="resultcontainerimdb" >
-                            <p>rating: ${rating}</p>
-                          </div>
-                          <div class="resultcontaineryear" >
-                            <p>year: ${year}</p>
-                          </div>
-                        </div>`
-            document.querySelector('.imdbcontainer').innerHTML += html
+                            <!-- this contains the title of the movie -->
+                        </div>
+                        <div class="resultcontainerimdb">
+                            <p>rating:${rating}</p>
+                            <!-- this will  contain the imdb rating  -->
+                        </div>
+                        <div class="resultcontaineryear" id="rcontyear1">
+                            <p>year:${year}</p>
+                        </div>
+                    </div>
+                    </div>`
+            document.querySelector('.searchresults').innerHTML += html
           }
         })
         .catch(err => console.error(err));

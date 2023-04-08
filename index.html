@@ -14,6 +14,7 @@
 
 <body>
     <script src="script.js"></script>
+
     <div class="container">
         <div class="titlebar">
             <div class="logo">
@@ -55,10 +56,9 @@
                 <div class="searchbox">
                     <form action="" class="searchform">
                         <label for="search">search</label>
-                        <input type="text" id="search" autocomplete="on"
-                        >
-                        <button type="button" onclick="search_movies()"><span> <!--this will change when we hover over it--> </span></button>
-        
+                        <input type="text" id="search" autocomplete="on">
+                        <button type="button" onclick = "search_movies()"><span> <!--this will change when we hover over it--> </span></button>
+
                     </form>
                 </div>
                 <div class="searchresults">
@@ -72,11 +72,24 @@
             <div class="imdb">
                 <p>Top 100imdb rated movies</p>
                 <div class="imdbcontainer">
-                    
-
+                    <div class="imdbcont">
+                        <div class="imdbcontimg">
+                            <img src="t.jpg" alt="${name}">
+                        </div>
+                        <div class="grp">
+                            <div class="imdbconttitle">
+                                <p>shawshank redemption</p>
+                            </div>
+                            <div class="imdbcontrating">
+                                <p>Rating: 9.2</p>
+                            </div>
+                        </div>
+                    </div>`
                 </div>
+
             </div>
         </div>
+    </div>
     </div>
 </body>
 
