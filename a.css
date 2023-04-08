@@ -84,37 +84,56 @@ body {
 .ribbon {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     background-color: blue;
     align-items:top;
-    justify-content: center;
+    justify-content: end;
     
 
 }
 .ribbon .search{
     display: flex;
     background-color: azure;
-    width:calc(100% - 200px);
+    width:100%;
     justify-content: end;
-
 }
 .ribbon .searchbox{
     display: flex;
+    flex-wrap: nowrap;
     position: relative;
-    /* right: 200px; */
     background-color: gray;
     flex-direction: row;
-    justify-self: center;
-    align-items: top;
+    /* justify-self: center;
+    align-items: end; */
+    right: 350px;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+       
+}
+.ribbon .searchform input{
+    /* display: flex; */
+    background-color: orange;
+}
 
+.ribbon .searchform label{
+    /* display: flex; */
+    background-color: pink;
+}
+.ribbon .searchform button{
+    position: relative;
+    content: url(favicon.png);
+    width: 30px;
+    height: 30px;
 }
 .ribbon .searchresults{
     display: flex;
-    position: relative;
-    opacity: 1;
+    position: absolute;
+    opacity: 0.5;
     flex-direction: column;
     height: fit-content;
-    width: 350px;
+    width: calc(fit-content + 5px );
+    border-radius: 0px 0px 0px  15px;
     background-color: burlywood;
     z-index: 2;
 }
@@ -122,7 +141,9 @@ body {
     display: flex;
     border: 1px brown dotted;
     height: 60px;
-    width: 100%;
+    width: 330px;
+    border-radius: 15px;
+    margin: 10px;
     background-color: orange;
 }
 .content .imdb .imdbcontainer{
