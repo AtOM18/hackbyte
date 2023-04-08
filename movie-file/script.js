@@ -27,13 +27,15 @@ fetch(`https://streaming-availability.p.rapidapi.com/v2/get/basic?country=us&imd
         let overview = data.overview
         const trailer = "https://www.youtube.com/embed/"+data.youtubeTrailerVideoId
         const rating = data.imdbRating
+        const watchlink = data.streamingInfo.us.prime[0].link
         document.getElementById("title").textContent = title
-        document.getElementById("rating").textContent = rating
+        document.getElementById("rating").textContent = "Rating: "+rating
         document.getElementById("description").textContent = overview
         document.getElementById("year").textContent = year
         document.getElementById("youtubelink").setAttribute("src", trailer)
-        //document.getElementById("watchlink").setAttribute("src", )//change this
-        document.getElementById("image").setAttribute("src", image) 
+        //change this
+        document.getElementById("image").setAttribute("src", image)
+        document.getElementById("watchlink").setAttribute("href", watchlink) 
         
     })
 	.catch(err => console.error(err));

@@ -34,6 +34,7 @@ function render_images(){
 	.then(response => response.json())
 	    .then(data => {
             const list = data
+            window.listitems = list
             for(let i = startIndex; i < endIndex && i < totalImages; i++){
               let item = list[i]
               console.log("test")
@@ -45,7 +46,9 @@ function render_images(){
                 //updating the dom
                 const movie = `<div class="imdbcont">
                                   <div class="imdbcontimg"></div>
+                                  <button type="button" onclick = "makeid2(this.id)" class="search_button" id= ${i}>
                                     <img src="${image}" alt="${name}" >
+                                  </button>
                                     <div class="grp">
                                       <div class="imdbconttitle">
                                         <p>${name}</p>
@@ -121,10 +124,17 @@ function search_movies(){
         .catch(err => console.error(err));
         
 }
-
+//for search function
 function makeid(id){
   let list = window.searchresults[id]
   console.log(list.imdbId)
   const newPageUrl = `./movie.html?imdbId=${list.imdbId}`
+  window.open(newPageUrl, "_blank")
+}
+//for top100
+function makeid2(id){
+  let list = window.listitems[id]
+  console.log(list.imdbid)
+  const newPageUrl = `./movie.html?imdbId=${list.imdbid}`
   window.open(newPageUrl, "_blank")
 }
