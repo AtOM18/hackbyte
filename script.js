@@ -27,7 +27,7 @@ function render_images(){
 		  'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
 	}
   }
-  fetch('https://imdb-top-100-movies.p.rapidapi.com/', options)
+//   fetch('https://imdb-top-100-movies.p.rapidapi.com/', options)
 	.then(response => response.json())
 	    .then(data => {
             const list = data
@@ -41,8 +41,9 @@ function render_images(){
                 const rating = item.rating
                 //updating the dom
                 const movie = `<div class="imdbcont">
-                                  <div class="imdbcontimg"></div>
+                                  <div class="imdbcontimg">
                                     <img src="${image}" alt="${name}" >
+                                    </div>
                                     <div class="grp">
                                       <div class="imdbconttitle">
                                         <p>${name}</p>
