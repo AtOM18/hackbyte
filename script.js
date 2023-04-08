@@ -52,7 +52,7 @@ function render_images(){
                                       </div>
                                     </div>
                                 </div>`
-                let movie_div = document.querySelector('.imdbcontainer').innerHTML += movie
+                document.querySelector('.imdbcontainer').innerHTML += movie
             }
             
         })
@@ -62,20 +62,47 @@ function render_images(){
 render_images()
 
 //Search function
-// function search_movies(){
-//     const input = document.getElementById("") //enter input tag id here
-//     //fetching data
-//     const options = {
-//         method: 'GET',
-//         headers: {
-//             'X-RapidAPI-Key': 'c03f2aca38mshf49060e433fd317p11e00ejsn9562b7ddf969',
-//             'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
-//         }
-//     };
-//     //generating the link
-//     const link = `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${input}&country=us&show_type=movie&output_language=en`
-//     fetch(link, options)
-//         .then(response => response.json())
-//         .then(response => console.log(response))
-//         .catch(err => console.error(err));
-// }
+function search_movies(){
+    const input = document.getElementById("search") //enter input tag id here
+    //fetching data
+    console.log(input.value)
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'c03f2aca38mshf49060e433fd317p11e00ejsn9562b7ddf969',
+            'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+        }
+    };
+    //generating the link
+    const link = `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${input.value}&country=us&show_type=movie&output_language=en`
+    fetch(link, options)
+        .then(response => response.json())
+        .then((response) =>{
+          let list = response.result
+          //info
+          for(let i = 0; i <8 ; i++){
+            let title = list[i].title 
+            let image = "https://image.tmdb.org/t/p/w92/"+list[i].posterPath
+            let rating = list[i].imdbRating
+            let year = list[i].year
+            console.log(title)
+            //style="background: url(${image});
+            let html = `<div class="resultcontainer">
+                          <div class="resultcontainerimage"> 
+                            <img src="${image}" alt="${title}" height="60">
+                          </div>
+                          <div class="resultcontainertitle" >
+                            <p>${title}</p>
+                          </div>
+                          <div class="resultcontainerimdb" >
+                            <p>rating: ${rating}</p>
+                          </div>
+                          <div class="resultcontaineryear" >
+                            <p>year: ${year}</p>
+                          </div>
+                        </div>`
+            document.querySelector('.imdbcontainer').innerHTML += html
+          }
+        })
+        .catch(err => console.error(err));
+}
