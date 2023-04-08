@@ -20,13 +20,16 @@ function render_images(){
   let startIndex = (currentPage - 1) * imagesPerPage;
   let endIndex = startIndex + imagesPerPage;
     //fetching top 100
-  const options = {
-	  method: 'GET',
-	  headers: {
-		  'X-RapidAPI-Key': 'c03f2aca38mshf49060e433fd317p11e00ejsn9562b7ddf969',
-		  'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
-	}
-  }
+    //change the options when max requests runs out
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'f87cbe203bmsh9f73f8e08ae4ef7p1e28b5jsn284b4a535805',
+        'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
+      }
+    };
+    
+  
   fetch('https://imdb-top-100-movies.p.rapidapi.com/', options)
 	.then(response => response.json())
 	    .then(data => {
@@ -66,19 +69,22 @@ function search_movies(){
     const input = document.getElementById("search") //enter input tag id here
     //fetching data
     console.log(input.value)
+    //change the options when max requests runs out
     const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'c03f2aca38mshf49060e433fd317p11e00ejsn9562b7ddf969',
-            'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
-        }
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'f0a946e90bmsha857731f45b6458p19066ejsnf0f1801fbf22',
+        'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+      }
     };
+    
     //generating the link
     const link = `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${input.value}&country=us&show_type=movie&output_language=en`
     fetch(link, options)
         .then(response => response.json())
         .then((response) =>{
           let list = response.result
+          window.searchresults = list
           //info
           for(let i = 0; i <8 ; i++){
             let title = list[i].title 
@@ -90,8 +96,10 @@ function search_movies(){
             let html = `<div class="resultcontainer">
                         <!-- these are the containers which will contain the image , name and the release date of the movie -->
                         <div class="resultcontainerimage">
+                        <button type="button" onclick = "makeid(this.id)" class="search_button" id= ${i}>
                             <img src="${image}" alt="${title}">
                             <!-- this contains the image of the container -->
+                          </button>
                         </div>
                         <div class="containergroup">
                         <div class="resultcontainertitle">
@@ -111,4 +119,12 @@ function search_movies(){
           }
         })
         .catch(err => console.error(err));
+        
+}
+
+function makeid(id){
+  let list = window.searchresults[id]
+  console.log(list.imdbId)
+  const newPageUrl = `./movie.html?imdbId=${list.imdbId}`
+  window.open(newPageUrl, "_blank")
 }

@@ -81,18 +81,19 @@
     </style>
   </head>
   <body>
+    <script src="./movie-file/script.js"></script>
     <div class="container">
-      <h1>Movie Title</h1>
+      <h1 id= "title">Movie Title</h1>
       <div class="info">
-        <span class="rating">8.5</span> | 
-        <span class="year">2021</span>
+        <span id = "rating" class="rating">8.5</span> | 
+        <span id = "year" class="year">2021</span>
       </div>
       <div class="trailer">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="youtubelink" width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <img src="movie-poster.jpg" alt="Movie Poster">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum, risus quis rhoncus congue, libero odio fringilla nunc, ut tempor tortor lorem sit amet sapien. Sed commodo risus nulla, vel tristique felis bibendum sit amet. Nulla vitae nunc at mi pharetra finibus. Nam efficitur aliquam neque vel faucibus.</p>
-      <a href="#" class="button">Watch Now</a>
+      <img id = "image" src="" alt="Movie Poster">
+      <p id="description"></p>
+      <a href="#" id="watchlink" class="button">Watch Now</a>
     </div>
   </body>
 </html>
