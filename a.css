@@ -192,7 +192,7 @@ body {
 
 .ribbon .searchform input {
 
-    margin-right: 350px;
+    margin-right: 35px;
     /* this is to be animated */
     height: 35px;
     background-color: rgba(11, 72, 195, 0.429);
@@ -236,7 +236,7 @@ body {
 }
 
 .ribbon .searchform button {
-    margin-right: 350px;
+    margin-right: 35px;
     /* this is to be animated */
     position: absolute;
     right: 0px;
@@ -250,7 +250,7 @@ body {
 
 }
 #b1{ 
-    margin-right: 310px; /*20px*/
+    margin-right: 0px; /*20px*/
     background-image: url(cross.png);
     background-size: contain;
     background-size: 25px;

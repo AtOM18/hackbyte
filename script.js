@@ -142,11 +142,15 @@ function makeid2(id){
 }
 
 function opensearch(){
-  element = document.querySelector(".searchbox")
-  element.style.right = "329px";
+  let element = document.querySelector(".searchbox")
+  element.style.right = "360px";
+  let element2 = document.getElementById("searchresultsid")
+  element2.style.right = "0px";
 }
 
 function closesearch(){
-  element = document.querySelector(".searchbox")
+  let element = document.querySelector(".searchbox")
   element.style.right = "0px";
+  let element2 = document.getElementById("searchresultsid")
+  element2.style.right = "-500px";
 }
