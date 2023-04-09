@@ -5,7 +5,7 @@ const imdbId = urlParams.get("imdbId");
 // Use the user ID in your code
 console.log(imdbId);
 
-//change the options when max requests runs out
+//change the options when max requests runs out for streaming-avaibility api
 const options = {
 	method: 'GET',
 	headers: {
