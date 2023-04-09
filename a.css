@@ -169,8 +169,8 @@ body {
     background-size: cover;
     border-top: 10px rgb(49, 86, 99) solid;
     border-bottom: 20px rgba(0, 0, 0, 0.384) solid;
-    right: 329px;
-    right: 0;  
+    right: 0px;
+    /* right: 0; 329   */
     /* initial: -500px final: 0px */
     /* this is to be animated */
     padding: 5px;
@@ -250,7 +250,7 @@ body {
 
 }
 #b1{ 
-    margin-right: 310px;
+    margin-right: 310px; /*20px*/
     background-image: url(cross.png);
     background-size: contain;
     background-size: 25px;

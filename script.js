@@ -20,11 +20,11 @@ function render_images(){
   let startIndex = (currentPage - 1) * imagesPerPage;
   let endIndex = startIndex + imagesPerPage;
     //fetching top 100
-    //change the options when max requests runs out
+    //change the options when max requests runs out for imdbtop100
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'f87cbe203bmsh9f73f8e08ae4ef7p1e28b5jsn284b4a535805',
+        'X-RapidAPI-Key': 'dc554bc96cmsh9dd5109d05819c3p1c3336jsnc17cb0c3d106',
         'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
       }
     };
@@ -74,7 +74,7 @@ function search_movies(){
     const input = document.getElementById("search") //enter input tag id here
     //fetching data
     console.log(input.value)
-    //change the options when max requests runs out
+    //change the options when max requests runs out  for streaming-availability
     const options = {
       method: 'GET',
       headers: {
@@ -141,6 +141,12 @@ function makeid2(id){
   window.open(newPageUrl, "_blank")
 }
 
-function animate_search(){
-  
+function opensearch(){
+  element = document.querySelector(".searchbox")
+  element.style.right = "329px";
+}
+
+function closesearch(){
+  element = document.querySelector(".searchbox")
+  element.style.right = "0px";
 }
