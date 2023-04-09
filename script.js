@@ -81,7 +81,7 @@ function search_movies(){
         'X-RapidAPI-Key': 'dc554bc96cmsh9dd5109d05819c3p1c3336jsnc17cb0c3d106',
         'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
       }
-    };
+    };  
     
     //generating the link
     const link = `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${input.value}&country=us&show_type=movie&output_language=en`
@@ -139,4 +139,8 @@ function makeid2(id){
   console.log(list.imdbid)
   const newPageUrl = `./movie.html?imdbId=${list.imdbid}`
   window.open(newPageUrl, "_blank")
+}
+
+function animate_search(){
+  
 }

@@ -170,7 +170,8 @@ body {
     border-top: 10px rgb(49, 86, 99) solid;
     border-bottom: 20px rgba(0, 0, 0, 0.384) solid;
     right: 329px;
-    right: 0;
+    right: 0;  
+    /* initial: -500px final: 0px */
     /* this is to be animated */
     padding: 5px;
     width: 100%;
