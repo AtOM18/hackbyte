@@ -75,7 +75,13 @@ function search_movies(){
     //fetching data
     console.log(input.value)
     //change the options when max requests runs out
-    const options = { 	method: 'GET', 	headers: { 		'X-RapidAPI-Key': '71bbe213bdmsh39a1f92e1d79ad4p153d06jsnb9f23afa2153', 		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com' 	} };
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'dc554bc96cmsh9dd5109d05819c3p1c3336jsnc17cb0c3d106',
+        'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+      }
+    };
     
     //generating the link
     const link = `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${input.value}&country=us&show_type=movie&output_language=en`
@@ -96,7 +102,7 @@ function search_movies(){
                         <!-- these are the containers which will contain the image , name and the release date of the movie -->
                         <div class="resultcontainerimage">
                        
-                            <img src="${image}" id= ${i} onclick = "makeid2(this.id)" alt="${title}">
+                            <img src="${image}" id= ${i} onclick = "makeid(this.id)" alt="${title}">
                             <!-- this contains the image of the container -->
                           
                         </div>

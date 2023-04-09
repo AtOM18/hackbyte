@@ -6,7 +6,13 @@ const imdbId = urlParams.get("imdbId");
 console.log(imdbId);
 
 //change the options when max requests runs out
-const options = { 	method: 'GET', 	headers: { 		'X-RapidAPI-Key': '71bbe213bdmsh39a1f92e1d79ad4p153d06jsnb9f23afa2153', 		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com' 	} };
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'dc554bc96cmsh9dd5109d05819c3p1c3336jsnc17cb0c3d106',
+		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+	}
+};
 
 
 fetch(`https://streaming-availability.p.rapidapi.com/v2/get/basic?country=us&imdb_id=${imdbId}`, options)
