@@ -78,10 +78,10 @@ function search_movies(){
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'dc554bc96cmsh9dd5109d05819c3p1c3336jsnc17cb0c3d106',
+        'X-RapidAPI-Key': 'b44df596c7msh2cbe85d73f8c0a7p1a59cejsn12d8c8bda624',
         'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
       }
-    };  
+    };
     
     //generating the link
     const link = `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${input.value}&country=us&show_type=movie&output_language=en`
