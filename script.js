@@ -1,19 +1,21 @@
  //change the options when max requests runs out for imdbtop100
- const options_imdb = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': 'dc554bc96cmsh9dd5109d05819c3p1c3336jsnc17cb0c3d106',
-    'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
-  }
-};
+  const options_imdb = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '3746b03025msh529a258bc467110p156bbajsn88d3025c6078',
+      'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
+    }
+  };
+  
+  
 
 //change the options when max requests runs out  for streaming-availability
 const options_search = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': 'b44df596c7msh2cbe85d73f8c0a7p1a59cejsn12d8c8bda624',
-    'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
-  }
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '3746b03025msh529a258bc467110p156bbajsn88d3025c6078',
+		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+	}
 };
 let currentPage = 1
 let imagesPerPage = 10

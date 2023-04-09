@@ -13,7 +13,7 @@ body {
     background-image: url(background_city.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 
 }
 
@@ -37,7 +37,7 @@ body {
     /* border: 4px black solid; */
     height: 75px;
     border-bottom: 4px solid rgba(0, 0, 0, 0.468);
-
+    transition: 0.3s;
 }
 
 .titlebar .logo {
@@ -155,7 +155,11 @@ body {
 .ribbon .search {
     display: flex;
     background-color: azure;
+    background-image: url(27250823_abstract_pixel_design_banner_3112.jpg);
+    background-size: cover;
     width: 100%;
+    border-top: 10px rgb(49, 86, 99) solid;
+    border-bottom: 20px rgba(0, 0, 0, 0.384) solid;
     justify-content: end;
 }
 
@@ -163,12 +167,12 @@ body {
     display: flex;
     flex-wrap: nowrap;
     position: relative;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
     flex-direction: row;
-    background-image: url(27250823_abstract_pixel_design_banner_3112.jpg);
-    background-size: cover;
-    border-top: 10px rgb(49, 86, 99) solid;
-    border-bottom: 20px rgba(0, 0, 0, 0.384) solid;
+    /* background-image: url(27250823_abstract_pixel_design_banner_3112.jpg);
+    background-size: cover; */
+    /* border-top: 10px rgb(49, 86, 99) solid;
+    border-bottom: 20px rgba(0, 0, 0, 0.384) solid; */
     right: 0px;
     /* right: 0; 329   */
     /* initial: -500px final: 0px */
@@ -178,6 +182,7 @@ body {
     height: 100%;
     align-items: center;
     justify-content: end;
+    transition: 0.5s;
 
 }
 
@@ -192,14 +197,14 @@ body {
 
 .ribbon .searchform input {
 
-    margin-right: 35px;
+    margin-right: 80px;
     /* this is to be animated */
     height: 35px;
-    background-color: rgba(11, 72, 195, 0.429);
+    background-color: rgba(14, 16, 19, 0.683);
     padding: 10px;
     width: 100px;
-    border: rgba(0, 0, 0, 0.226) 3px solid;
-    color: black;
+    border: rgba(0, 0, 0, 0.226) 6px solid;
+    color: rgb(109, 146, 148);
     border-radius: 35px 0px 0px 35px;
     transition-duration: 0.8s;
 
@@ -209,6 +214,7 @@ body {
 .searchform input:hover {
     transition-timing-function: 1s;
     width: 250px;
+    color: rgb(255, 255, 255);
     background-color: rgba(128, 132, 186, 0.58);
     border: rgba(0, 0, 0, 0.6) 3px solid;
     border-radius: 5px 0 0 5px;
@@ -221,7 +227,15 @@ body {
 }
 
 .searchform input:hover::placeholder {
-    color: black;
+    color: rgb(255, 255, 255);
+}
+
+.searchform input:active::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.searchform input:focus::placeholder {
+    color: rgb(255, 255, 255);
 }
 
 .searchform input:active {
@@ -236,7 +250,7 @@ body {
 }
 
 .ribbon .searchform button {
-    margin-right: 35px;
+    margin-right: 80px;
     /* this is to be animated */
     position: absolute;
     right: 0px;
@@ -247,13 +261,18 @@ body {
     border-radius: 35px;
     width: 35px;
     height: 35px;
+    border: 2px solid rgba(22, 23, 23, 0);
 
 }
-#b1{ 
-    margin-right: 0px; /*20px*/
-    background-image: url(cross.png);
+
+#b1 {
+    margin-right: 45px;
+    /*20px*/
+    background-image: url(cross-new.png);
     background-size: contain;
-    background-size: 25px;
+    background-size: 35px;
+    background-position: -1px;
+    border: 1px solid rgba(44, 194, 210, 0.308);
 }
 
 .ribbon .searchresults {
@@ -376,7 +395,7 @@ body {
 
 .content:hover {
     display: flexbox;
-    background-color: rgba(94, 181, 215, 0.557);
+    background-color: rgba(65, 93, 104, 0.742);
     margin: 15px;
     margin-right: 35px;
     border: 10px rgba(3, 3, 3, 0.639) solid;
@@ -479,6 +498,9 @@ body {
 }
 
 #buttonleft {
+    position: absolute;
+    left: 20px;
+    top: 50vh;
     background-image: url(left\ arrow.png);
     background-size: cover;
     opacity: 0.8;
@@ -486,6 +508,9 @@ body {
 }
 
 #buttonright {
+    position: absolute;
+    right: 20px;
+    top: 50vh;
     background-image: url(right\ arrow.png);
     background-size: cover;
     opacity: 0.8;
