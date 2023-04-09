@@ -91,6 +91,7 @@ function search_movies(){
           let list = response.result
           window.searchresults = list
           //info
+          document.querySelector('.searchresults').innerHTML =''
           for(let i = 0; i <8 ; i++){
             let title = list[i].title 
             let image = "https://image.tmdb.org/t/p/w92/"+list[i].posterPath
