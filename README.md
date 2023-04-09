@@ -13,3 +13,5 @@ NOTE: Api will return 429 error when requests runs out
       
       API USED: https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability
                 https://rapidapi.com/rapihub-rapihub-default/api/imdb-top-100-movies
+                
+ NOTE: search result images will not generate using college network
