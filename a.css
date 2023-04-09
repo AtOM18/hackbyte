@@ -170,7 +170,8 @@ body {
     border-top: 10px rgb(49, 86, 99) solid;
     border-bottom: 20px rgba(0, 0, 0, 0.384) solid;
     right: 329px;
-    /* right: 0; */
+    right: 0;
+    /* this is to be animated */
     padding: 5px;
     width: 100%;
     height: 100%;
@@ -190,7 +191,8 @@ body {
 
 .ribbon .searchform input {
 
-    margin-right: 50px;
+    margin-right: 350px;
+    /* this is to be animated */
     height: 35px;
     background-color: rgba(11, 72, 195, 0.429);
     padding: 10px;
@@ -233,7 +235,8 @@ body {
 }
 
 .ribbon .searchform button {
-    margin-right: 50px;
+    margin-right: 350px;
+    /* this is to be animated */
     position: absolute;
     right: 0px;
     margin-bottom: 4px;
@@ -244,6 +247,12 @@ body {
     width: 35px;
     height: 35px;
 
+}
+#b1{ 
+    margin-right: 310px;
+    background-image: url(cross.png);
+    background-size: contain;
+    background-size: 25px;
 }
 
 .ribbon .searchresults {
