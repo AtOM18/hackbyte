@@ -44,13 +44,14 @@ function render_images(){
                 const image = item.image
                 const rank = item.rank
                 const rating = item.rating
-                //updating the dom
+                //updating the dom <button type="button" onclick = "makeid2(this.id)" class="search_button" id= ${i}>
                 const movie = `<div class="imdbcont">
-                                  <div class="imdbcontimg"></div>
-                                  <button type="button" onclick = "makeid2(this.id)" class="search_button" id= ${i}>
-                                    <img src="${image}" alt="${name}" >
-                                  </button>
-                                    <div class="grp">
+                                  <div class="imdbcontimg">
+                                  
+                                    <img src="${image}" id= ${i} onclick = "makeid2(this.id)" alt="${name}" >
+                                  
+                                  </div>
+                                  <div class="grp">
                                       <div class="imdbconttitle">
                                         <p>${name}</p>
                                       </div>
@@ -74,13 +75,7 @@ function search_movies(){
     //fetching data
     console.log(input.value)
     //change the options when max requests runs out
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': 'f0a946e90bmsha857731f45b6458p19066ejsnf0f1801fbf22',
-        'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
-      }
-    };
+    const options = { 	method: 'GET', 	headers: { 		'X-RapidAPI-Key': '71bbe213bdmsh39a1f92e1d79ad4p153d06jsnb9f23afa2153', 		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com' 	} };
     
     //generating the link
     const link = `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${input.value}&country=us&show_type=movie&output_language=en`
@@ -100,10 +95,10 @@ function search_movies(){
             let html = `<div class="resultcontainer">
                         <!-- these are the containers which will contain the image , name and the release date of the movie -->
                         <div class="resultcontainerimage">
-                        <button type="button" onclick = "makeid(this.id)" class="search_button" id= ${i}>
-                            <img src="${image}" alt="${title}">
+                       
+                            <img src="${image}" id= ${i} onclick = "makeid2(this.id)" alt="${title}">
                             <!-- this contains the image of the container -->
-                          </button>
+                          
                         </div>
                         <div class="containergroup">
                         <div class="resultcontainertitle">

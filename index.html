@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,29 +21,12 @@
             <div class="logo">
                 <!-- this will show the site logo -->
                 <div class="image">
-                    
+
                 </div>
             </div>
             <div class="titlecont">
                 <div class="site-name">
-                    <p>site-name</p>
-                </div>
-                <div class="platformlist">
-                    <ul>
-                        <li>
-                            <p>platformx</p>
-                        </li>
-                        <li>
-                            <p>platformx</p>
-                        </li>
-                        <li>
-                            <p>platformx</p>
-                        </li>
-                        <li>
-                            <p>platformx</p>
-                        </li>
-                    </ul>
-                    <!-- then after t2hese we can have a dropdown option -->
+                    <p>Filmcity</p>
                 </div>
             </div>
         </div>
@@ -54,15 +38,40 @@
                 <!-- this will have the searchbox -->
                 <!-- three parts searchlabel , searchbox , search button -->
                 <div class="searchbox">
+
                     <form action="" class="searchform">
-                        <label for="search">search</label>
-                        <input type="text" id="search" autocomplete="on">
-                        <button type="button" onclick = "search_movies()"><span> <!--this will change when we hover over it--> </span></button>
+                        <input type="text" id="search" autocomplete="on" placeholder="Search...">
+                        <button onclick="search_movies()" , type="button"><span>
+                                <!--this will change when we hover over it--> </span></button>
 
                     </form>
                 </div>
-                <div class="searchresults">
+                <div class="searchresults" id="searchresultsid">
                     <!-- this will have the 8search results -->
+
+                    
+                </div>
+                    <div class="resultcontainer" id="rcont1">
+                        <!-- these are the containers which will contain the image , name and the release date of the movie -->
+                        <div class="resultcontainerimage" id="rcontimg1">
+                            <img src="t.jpg" alt="">
+                            <!-- this contains the image of the container -->
+                        </div>
+                        <div class="containergroup">
+                            <div class="resultcontainertitle" id="rconttitle1">
+                                <p>movie title</p>
+                                <!-- this contains the title of the movie -->
+                            </div>
+                            <div class="resultcontainerimdb" id="rcontimdb1">
+                                <p>rating</p>
+                                <!-- this will  contain the imdb rating  -->
+                            </div>
+                            <div class="resultcontaineryear" id="rcontyear1">
+                                <p>year</p>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
@@ -72,28 +81,16 @@
             <div class="imdb">
                 <p>Top 100imdb rated movies</p>
                 <div class="imdbcontainer">
-                    <div class="imdbcont">
-                        <div class="imdbcontimg">
-                            <img src="t.jpg" alt="${name}">
-                        </div>
-                        <div class="grp">
-                            <div class="imdbconttitle">
-                                <p>shawshank redemption</p>
-                            </div>
-                            <div class="imdbcontrating">
-                                <p>Rating: 9.2</p>
-                            </div>
-                        </div>
-                    </div>`
+                 </div>   
+                <div>
+                    <button id="buttonleft" onclick="goToPrevPage()"></button>
+                    <button id="buttonright" onclick="goToNextPage()"></button>
                 </div>
 
             </div>
         </div>
     </div>
     </div>
-     <!-- these buttons are temporary -->
-    <button onclick="goToPrevPage()">prev</button> 
-    <button onclick="goToNextPage()">next</button>
 </body>
 
 </html>
