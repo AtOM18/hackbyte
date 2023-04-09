@@ -154,4 +154,5 @@ function closesearch(){
   element.style.right = "0px";
   let element2 = document.getElementById("searchresultsid")
   element2.style.right = "-500px";
+  document.querySelector('.searchresults').innerHTML =''
 }
